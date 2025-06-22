@@ -21,6 +21,12 @@ SELECT name
 FROM artists 
 WHERE name NOT LIKE '% %';
 
+-- 5. Название треков, которые содержат слово «мой» или «my»
+SELECT title 
+FROM tracks 
+WHERE 
+    title ~* '(^|\s)my(\s|$)' OR title ~* '(^|\s)мой(\s|$)';
+
 
 -- Задание 3: Дополнительные SELECT-запросы
 
